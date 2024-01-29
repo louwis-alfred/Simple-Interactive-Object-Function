@@ -1,9 +1,10 @@
-# Car
+# Parent / Based
 class Car:
     # Assignment
     AnswerA = ""
     AnswerB = ""
     
+    # Object Function
     def __init__(self,type,color,price,plateNumber):
         self.type = type
         self.color = color
@@ -21,7 +22,7 @@ class Car:
         print(f'Color: {self.color}')
         print(f'Price: {self.price}')
         print(f"Car number: {self.plateNumber}")
-        
+# User Input        
 type = input('Enter Type: ').strip().capitalize()
 color = input('Enter Color: ').strip().capitalize()
 price = float(input('Enter price: '))
@@ -30,6 +31,7 @@ plateNumber = input('Enter car number: ').upper().strip()
 carOne = Car(type,color,price,plateNumber)
 carOne.details()
 AnswerA = input('Do you want to buy this? ').strip().lower()
+
 # Function
 while True:
     if AnswerA == 'yes':
@@ -39,7 +41,7 @@ while True:
         break
     else:
         print(f"{AnswerA} is not on option")
-        
+# User Input       
 while True:
     AnswerB = input('Do you want to continue? ').lower().strip()
     if AnswerB == 'yes':
